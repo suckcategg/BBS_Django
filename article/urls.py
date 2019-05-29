@@ -1,1 +1,1 @@
-from django.urls import pathfrom . import viewsapp_name = 'article'urlpatterns = [    #目前没url    path('article-list/',views.article_list, name="article_list"),#    path('article-list/',views.article_list, name="article_list"),]
+from django.urls import pathfrom . import viewsapp_name = 'article'urlpatterns = [    #目前没url    path('article-list/', views.article_list, name="article_list"),    #文章详情    path('article-detail/<int:id>/', views.article_detail, name='article_detail'),]

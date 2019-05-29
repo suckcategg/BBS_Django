@@ -9,3 +9,7 @@ def article_list(request):
     context = {'articles':article}
     return render(request,'article/list.html',context)
 
+def article_detail(request):
+    article = ArticlePost.objects.get(id=id)
+    context = {'article': article}
+    return  render(request, 'article/detail.html',context)
