@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e5b1b77-ac50-4e71-9cfa-4a9e0eef587d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +64,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/detail.html">
+        <entry file="file://$PROJECT_DIR$/templates/article/detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
@@ -73,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
@@ -135,11 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/article/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="361">
+              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -180,13 +179,13 @@
         <option value="$PROJECT_DIR$/static/popper/popper.js" />
         <option value="$PROJECT_DIR$/static/popper/popper-1.14.4.js" />
         <option value="$PROJECT_DIR$/django_BBS/settings.py" />
-        <option value="$PROJECT_DIR$/templates/article/list.html" />
         <option value="$PROJECT_DIR$/templates/footer.html" />
-        <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/detail.html" />
         <option value="$PROJECT_DIR$/article/urls.py" />
         <option value="$PROJECT_DIR$/article/views.py" />
+        <option value="$PROJECT_DIR$/templates/header.html" />
+        <option value="$PROJECT_DIR$/templates/article/list.html" />
       </list>
     </option>
   </component>
@@ -229,6 +228,12 @@
             </path>
             <path>
               <item name="BBS_Django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBS_Django" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBS_Django" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -244,6 +249,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\BBS_Django\templates\article" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -318,7 +328,7 @@
       <option name="presentableId" value="Default" />
       <updated>1559106707987</updated>
       <workItem from="1559106709352" duration="5364000" />
-      <workItem from="1559112880017" duration="9362000" />
+      <workItem from="1559112880017" duration="10927000" />
     </task>
     <task id="LOCAL-00001" summary="001">
       <created>1559106763668</created>
@@ -376,7 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559121661760</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="/article/article-detail/1/  &#10;BUG已解决(文件路径创建出错)">
+      <created>1559122416661</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1559122416661</updated>
+    </task>
+    <task id="LOCAL-00010" summary="可从导航栏“文章”链接返回首页">
+      <created>1559122628879</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1559122628879</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -385,7 +409,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14726000" />
+    <option name="totallyTimeSpent" value="16291000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -398,6 +422,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -457,7 +482,9 @@
     <MESSAGE value="db.sqlite" />
     <MESSAGE value="jango 将会根据用户请求的 URL 来选择使用哪个视图。本例中当用户请求article/article-list链接时，会调用views.py中的article_list函数，并返回渲染后的对象。参数name用于反查url地址，相当于给url起了个名字，" />
     <MESSAGE value="TypeError at /article/article-detail/1/  &#10;暂时未找到bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="TypeError at /article/article-detail/1/  &#10;暂时未找到bug" />
+    <MESSAGE value="/article/article-detail/1/  &#10;BUG已解决(文件路径创建出错)" />
+    <MESSAGE value="可从导航栏“文章”链接返回首页" />
+    <option name="LAST_COMMIT_MESSAGE" value="可从导航栏“文章”链接返回首页" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BBS_Django$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1559112329731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -548,24 +575,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/article/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -598,7 +611,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+    <entry file="file://$PROJECT_DIR$/templates/article/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
@@ -615,6 +628,20 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/article/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
         </state>
       </provider>
     </entry>
