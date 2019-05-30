@@ -25,7 +25,10 @@ SECRET_KEY = 'ku$ou^gwagg1t-gemc@dkvc6q%ap=)1_h^bxg9v()wv=&=n*f$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['2459zf9467.wicp.vip',
+                 '127.0.0.1',
+                 'localhost',
+                 ]
 
 
 # Application definition

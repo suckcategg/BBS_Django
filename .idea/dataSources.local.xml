@@ -12,7 +12,6 @@
     </data-source>
     <data-source name="Django default" uuid="3537d7a8-9ed2-431f-b209-1e66f47f6b83">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
-      <auth-required>false</auth-required>
     </data-source>
   </component>
 </project>
