@@ -55,7 +55,12 @@ def article_create(request):
         context = {'article_post_dorm': article_post_from}
         # 返回模板
         return render(request, 'article/create.html',context)
-
+def article_delete(request, id):
+    # 根据id获取文章
+    article = ArticlePost.objects.get(id=id)
+    # 调用.delete方法删除
+    article.delete()
+    return  redirect("article:article_list")
 
 
 
