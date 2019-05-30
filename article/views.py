@@ -60,7 +60,30 @@ def article_delete(request, id):
     article = ArticlePost.objects.get(id=id)
     # 调用.delete方法删除
     article.delete()
-    return  redirect("article:article_list")
+    return redirect("article:article_list")
 
 
+def article_update(request,id):
+    """
+        更新文章的视图函数
+        通过POST方法提交表单，更新titile、body字段
+        GET方法进入初始表单页面
+        id： 文章的 id
+    """
+    article = ArticlePost.objects.get(id=id)
+
+    if request.method == "POST":
+        article_post_form = ArticlePostForm(data=request.POST)
+        if article_post_form.is_valid():
+            article.title = request.POST['title']
+            article.body = request.POST['body']
+            article.save()
+            return redirect("article:article_detail",id=id)
+        else:
+            return HttpResponse("表单错误，请重新填写！")
+
+    else:
+        article_post_form = ArticlePostForm()
+        context = {'article': article, 'article_post_form': article_post_form}
+        return render(request, 'article/update.html', context)
 
