@@ -8,7 +8,7 @@ from .forms import ArticlePostForm
 from django.http import HttpResponse
 # 引入User模型
 from django.contrib.auth.models import User
-
+from django.contrib.auth.decorators import login_required
 
 
 def article_list(request):
@@ -28,7 +28,7 @@ def article_detail(request, id):
         ])
     context = {'article': article}
     return render(request, 'article/detail.html', context)
-
+@login_required(login_url='/userprofile/login/')
 def article_create(request):
     # 判断用户是否提交空数据
     if request.method == "POST":
@@ -41,7 +41,7 @@ def article_create(request):
             # 指定数据库中 id 为1的用户为作者
             # 如果你进行过删除数据表的操作，可能会找不到id=1的用户
             # 此时请重新创建用户，并传入此用户的id
-            new_article.author = User.objects.get(id=1)
+            new_article.author = User.objects.get(id=request.user.id)
             # 将文章保存到数据库重
             new_article.save()
             # 返回文章列表
@@ -55,6 +55,8 @@ def article_create(request):
         context = {'article_post_dorm': article_post_from}
         # 返回模板
         return render(request, 'article/create.html',context)
+
+@login_required(login_url='/userprofile/login/<int:id>')
 def article_delete(request, id):
     # 根据id获取文章
     article = ArticlePost.objects.get(id=id)
@@ -62,7 +64,7 @@ def article_delete(request, id):
     article.delete()
     return redirect("article:article_list")
 
-
+@login_required(login_url='/userprofile/login/<int:id>')
 def article_update(request,id):
     """
         更新文章的视图函数

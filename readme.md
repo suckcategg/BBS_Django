@@ -1,0 +1,1 @@
+##需要安装的第三方库    django2.2.1    markdown    Pygments    -U django-password-reset    Pillow
