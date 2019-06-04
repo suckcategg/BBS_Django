@@ -5,10 +5,12 @@ from .models import ArticlePost
 # 引入刚才定义的ArticlePostForm表单类
 from .forms import ArticlePostForm
 # 引入HttpResponse
-from django.http import HttpResponse
+
+from django.http import HttpResponse,HttpResponseRedirect
 # 引入User模型
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from userprofile.models import Profile
 
 
 def article_list(request):
@@ -56,15 +58,28 @@ def article_create(request):
         # 返回模板
         return render(request, 'article/create.html',context)
 
-@login_required(login_url='/userprofile/login/<int:id>')
+@login_required(login_url='/userprofile/login/')
 def article_delete(request, id):
+
+        # 记住来源的url，如果没有则设置为首页('/')
+    request.session['login_from'] = request.META.get('HTTP_REFERER', '/')
+    user = request.session.get('_auth_user_id')
     # 根据id获取文章
     article = ArticlePost.objects.get(id=id)
-    # 调用.delete方法删除
-    article.delete()
+
+    #if request.method == 'POST':
+        #return HttpResponseRedirect(request.session['login_from'])
+    if str(article.author_id) != str(user):
+        return render(request, 'article/error.html', {'script': "alert", 'wrong': '你没有权限删除此文章',})
+
+                      # next(HttpResponseRedirect(request.session['login_from'])))
+        #return HttpResponseRedirect(request, 'article/error.html', {'script': "alert", 'wrong': '你没有权限删除此文章'})
+    else:
+        # 调用.delete方法删除
+        article.delete()
     return redirect("article:article_list")
 
-@login_required(login_url='/userprofile/login/<int:id>')
+@login_required(login_url='/userprofile/login/')
 def article_update(request,id):
     """
         更新文章的视图函数
@@ -72,9 +87,14 @@ def article_update(request,id):
         GET方法进入初始表单页面
         id： 文章的 id
     """
+    user = request.session.get('_auth_user_id')
+
     article = ArticlePost.objects.get(id=id)
+    #print(user,article.author_id)
 
     if request.method == "POST":
+        if str(article.author_id) != str(user):
+            return HttpResponse("你没有权限修改此文章")
         article_post_form = ArticlePostForm(data=request.POST)
         if article_post_form.is_valid():
             article.title = request.POST['title']
@@ -88,4 +108,5 @@ def article_update(request,id):
         article_post_form = ArticlePostForm()
         context = {'article': article, 'article_post_form': article_post_form}
         return render(request, 'article/update.html', context)
-
+# def return_to_list(request):
+#     return redirect("article:article_list")

@@ -74,7 +74,7 @@ def profile_edit(request, id):
 
     if request.method == "POST":
         #验证修改数据者
-        if request != user:
+        if request.user != user:
 
             return HttpResponse("你没有权限修改此用户信息")
         profile_form = ProfileFrom(data=request.POST)
