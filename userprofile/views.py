@@ -88,7 +88,6 @@ def profile_edit(request, id):
     if request.method == "POST":
         #验证修改数据者
         if request.user != user:
-
             return HttpResponse("你没有权限修改此用户信息")
         profile_form = ProfileFrom(request.POST, request.FILES)
         if profile_form.is_valid():
@@ -98,9 +97,15 @@ def profile_edit(request, id):
             if 'avatar' in request.FILES:
                 profile.avatar = profile_cd["avatar"]
             profile.save()
+            messages.info(request,"信息更新成功")
             return redirect("userprofile:edit",id=id)
         else:
+            # 未触发。暂时无法验证问题
+            messages.error(request, "表单内容有误，请重新填写！")
+            context = {'profile': profile, 'profile_form': ProfileFrom}
+            return render(request, 'userprofile/edit.html', context)
             return HttpResponse("注册表单输入有误，请重新输入~")
+
     elif request.method == "GET":
         profile_form = ProfileFrom()
         context = {'profile_form': profile_form, 'profile':profile, 'user':user}
