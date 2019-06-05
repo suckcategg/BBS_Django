@@ -5,7 +5,7 @@ from .models import ArticlePost
 # 引入刚才定义的ArticlePostForm表单类
 from .forms import ArticlePostForm
 # 引入HttpResponse
-
+from django.contrib import messages
 from django.http import HttpResponse,HttpResponseRedirect
 # 引入User模型
 from django.contrib.auth.models import User
@@ -49,31 +49,34 @@ def article_create(request):
             # 返回文章列表
             return redirect("article:article_list")
         else:
-            return HttpResponse("表单内容有误，请重新填写！")
+            messages.error(request, "表单内容有误，请重新填写！")
+            return render(request, 'article/create.html')
+            # article_post_form = ArticlePostForm()
+            # context = {'article_post_form': article_post_form}
+            # return HttpResponse("表单内容有误，请重新填写！")
     else:
         # 创建表单类实例
         article_post_from = ArticlePostForm()
         # 赋值上下文
-        context = {'article_post_dorm': article_post_from}
+        context = {'article_post_form': article_post_from}
         # 返回模板
         return render(request, 'article/create.html',context)
 
 @login_required(login_url='/userprofile/login/')
 def article_delete(request, id):
 
-        # 记住来源的url，如果没有则设置为首页('/')
-    request.session['login_from'] = request.META.get('HTTP_REFERER', '/')
+    # 记住来源的url，如果没有则设置为首页('/')
+    # request.session['last_page'] = request.META.get('HTTP_REFERER', '/')
     user = request.session.get('_auth_user_id')
     # 根据id获取文章
     article = ArticlePost.objects.get(id=id)
-
-    #if request.method == 'POST':
-        #return HttpResponseRedirect(request.session['login_from'])
     if str(article.author_id) != str(user):
-        return render(request, 'article/error.html', {'script': "alert", 'wrong': '你没有权限删除此文章',})
-
-                      # next(HttpResponseRedirect(request.session['login_from'])))
-        #return HttpResponseRedirect(request, 'article/error.html', {'script': "alert", 'wrong': '你没有权限删除此文章'})
+        messages.error(request, "你没有权限删除此文章")
+        # return render(request, 'article/delete.html', {'script': "alert", 'wrong': '你没有权限删除此文章',})
+        # return redirect("article:article_list")
+        article_post_form = ArticlePostForm()
+        context = {'article': article, 'article_post_form': article_post_form}
+        return render(request, 'article/detail.html', context)
     else:
         # 调用.delete方法删除
         article.delete()
@@ -91,10 +94,19 @@ def article_update(request,id):
 
     article = ArticlePost.objects.get(id=id)
     #print(user,article.author_id)
+    if str(article.author_id) != str(user):
+        messages.error(request, "你没有权限修改此文章")
+        article_post_form = ArticlePostForm()
+        context = {'article': article, 'article_post_form': article_post_form}
+        return render(request, 'article/detail.html', context)
 
     if request.method == "POST":
-        if str(article.author_id) != str(user):
-            return HttpResponse("你没有权限修改此文章")
+        # if str(article.author_id) != str(user):
+        #     messages.error(request, "你没有权限修改此文章")
+        #     article_post_form = ArticlePostForm()
+        #     context = {'article': article, 'article_post_form': article_post_form}
+        #     return render(request, 'article/detail.html', context)
+        #     #return HttpResponse("你没有权限修改此文章")
         article_post_form = ArticlePostForm(data=request.POST)
         if article_post_form.is_valid():
             article.title = request.POST['title']
@@ -102,7 +114,10 @@ def article_update(request,id):
             article.save()
             return redirect("article:article_detail",id=id)
         else:
-            return HttpResponse("表单错误，请重新填写！")
+            messages.error(request, "表单内容有误，请重新填写！")
+            context = {'article': article, 'article_post_form': article_post_form}
+            return render(request, 'article/update.html',context)
+
 
     else:
         article_post_form = ArticlePostForm()

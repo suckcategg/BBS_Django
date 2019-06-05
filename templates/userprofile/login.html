@@ -4,6 +4,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12" >
+                {% if messages %}
+                    <script>
+                        {% for msg in messages %}
+                            alert('{{ msg.message }}');
+                        {% endfor %}
+                    </script>
+                {% endif %}
+
                 <br>
                 <h5>还没有账号？</h5>
                 <h5>点击<a href='{% url "userprofile:register" %}'>注册账号</a>加入我们吧！</h5>

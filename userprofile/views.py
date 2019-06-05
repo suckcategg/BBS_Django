@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileFrom
 from .models import Profile
+from django.contrib import messages
 
 # Create your views here.
 
@@ -22,15 +23,23 @@ def user_login(request):
                 login(request, user)
                 return redirect("article:article_list")
             else:
-                return HttpResponse("账号或密码输入错误，请重新输入！")
+                messages.error(request, "表单内容有误，请重新填写！")
+                # user_login_form = UserLoginForm()
+                # context = {'userprofile': data, 'user_login_form': UserLoginForm}
+                return redirect('userprofile:login')
+                #return HttpResponse("账号或密码输入错误，请重新输入！")
         else:
-            return HttpResponse("账号或密码输入不合法")
+            messages.error(request, "账号或密码输入不合法")
+            return redirect('userprofile:login')
+            # return HttpResponse("账号或密码输入不合法")
     elif request.method == 'GET':
         user_login_form = UserLoginForm()
         context = {'from': user_login_form}
         return render(request, 'userprofile/login.html', context)
     else:
-        return HttpResponse("请使用GET或POST请求数据")
+        messages.error(request, "请使用GET或POST请求数据")
+        return redirect('userprofile:login')
+        # return HttpResponse("请使用GET或POST请求数据")
 def user_logout(request):
     logout(request)
     return redirect("article:article_list")
@@ -45,10 +54,14 @@ def user_register(request):
             login(request, new_user)
             return redirect("article:article_list")
         else:
-            return HttpResponse("注册表单输入有误，请重新输入")
+            messages.error(request, "注册表单输入有误，请重新输入")
+            user_register_form = UserRegisterForm(data=request.POST)
+            context = {'form': user_register_form}
+            return render(request, 'userprofile/register.html', context)
+            # return HttpResponse("注册表单输入有误，请重新输入")
     elif request.method == "GET":
-        user_register_form = UserLoginForm()
-        context = {'form': user_register_form}
+        user_register_form = UserRegisterForm
+        context = {'data':data, 'form': user_register_form}
         return render(request, 'userprofile/register.html',context)
     else:
         return HttpResponse("请使用GET或POST请求数据")
