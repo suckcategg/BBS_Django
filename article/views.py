@@ -11,12 +11,19 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from userprofile.models import Profile
-
-
+from django.core.paginator import Paginator
+# 列表页  --翻页
 def article_list(request):
     #return HttpResponse("Hello_World!")
-    article = ArticlePost.objects.all()
-    context = {'articles':article}
+    article_list = ArticlePost.objects.all()
+    # 每页显示的文章数
+    pagintor = Paginator(article_list,6)
+    # 获取页码
+    page = request.GET.get('page')
+    # 页码内容反个 articles
+    articles = pagintor.get_page(page)
+
+    context = {'articles':articles}
     return render(request,'article/list.html',context)
 
 def article_detail(request, id):
