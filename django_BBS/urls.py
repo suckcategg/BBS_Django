@@ -19,8 +19,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url,include
 from django.contrib import admin
-
+from article import views
+from article.views import  article_list
 urlpatterns = [
+    url(r'^$',views.article_list),
     path('admin/', admin.site.urls),
     path('article/', include('article.urls', namespace='article')),
     path('userprofile/', include('userprofile.urls', namespace='userprofile')),
