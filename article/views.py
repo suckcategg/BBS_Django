@@ -14,16 +14,22 @@ from userprofile.models import Profile
 from django.core.paginator import Paginator
 # 列表页  --翻页
 def article_list(request):
-    #return HttpResponse("Hello_World!")
-    article_list = ArticlePost.objects.all()
+    if  request.GET.get('order') == 'total_views':
+
+        article_list = ArticlePost.objects.all().order_by('-total_views')
+        order = 'total_views'
+    else:
+        article_list = ArticlePost.objects.all()
+        order = 'normal'
     # 每页显示的文章数
-    pagintor = Paginator(article_list,6)
+
+    pagintor = Paginator(article_list,3)
     # 获取页码
     page = request.GET.get('page')
     # 页码内容反个 articles
     articles = pagintor.get_page(page)
 
-    context = {'articles':articles}
+    context = {'articles':articles,'order':order}
     return render(request,'article/list.html',context)
 
 def article_detail(request, id):
@@ -78,7 +84,7 @@ def article_delete(request, id):
     user = request.session.get('_auth_user_id')
     # 根据id获取文章
     article = ArticlePost.objects.get(id=id)
-    if str(article.author_id) != str(user):
+    if request.user != article.author:
         messages.error(request, "你没有权限删除此文章")
         # return render(request, 'article/delete.html', {'script': "alert", 'wrong': '你没有权限删除此文章',})
         # return redirect("article:article_list")
@@ -102,7 +108,8 @@ def article_update(request,id):
 
     article = ArticlePost.objects.get(id=id)
     #print(user,article.author_id)
-    if str(article.author_id) != str(user):
+    if request.user != article.author:
+    # if str(article.author_id) != str(user):
         messages.error(request, "你没有权限修改此文章")
         article_post_form = ArticlePostForm()
         context = {'article': article, 'article_post_form': article_post_form}
