@@ -57,13 +57,18 @@ def article_detail(request, id):
     article = ArticlePost.objects.get(id=id)
     article.total_views+=1
     article.save(update_fields=['total_views'])
-    article.body = markdown.markdown(article.body,
-        extensions = [
-        'markdown.extensions.extra',
+    md = markdown.Markdown(
+        extensions=[
+            'markdown.extensions.extra',
+            'markdown.extensions.codehilite',
+            'markdown.extensions.toc',
+        ]
+    )
+    article.body = md.convert(article.body)
 
-        'markdown.extensions.codehilite',
-        ])
-    context = {'article': article}
+    # 新增了md.toc对象
+    context = {'article': article, 'toc': md.toc}
+
     return render(request, 'article/detail.html', context)
 @login_required(login_url='/userprofile/login/')
 def article_create(request):
