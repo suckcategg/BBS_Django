@@ -12,16 +12,37 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from userprofile.models import Profile
 from django.core.paginator import Paginator
+from django.db.models import Q
 # 列表页  --翻页
 def article_list(request):
-    if  request.GET.get('order') == 'total_views':
-
-        article_list = ArticlePost.objects.all().order_by('-total_views')
-        order = 'total_views'
+    search  = request.GET.get('search')
+    order = request.GET.get('order')
+    if search:
+        if order == 'total_views':
+            article_list = ArticlePost.objects.filter(
+                Q(title__icontains=search)|
+                Q(body__icontains=search)
+            ).order_by('-total_views')
+        else:
+            article_list = ArticlePost.objects.filter(
+                Q(title__icontains=search)|
+                Q(body__icontains=search)
+            )
     else:
-        article_list = ArticlePost.objects.all()
-        order = 'normal'
-    # 每页显示的文章数
+        search = ""
+        if order == 'total_views':
+            article_list = ArticlePost.objects.all().order_by('-total_views')
+        else:
+            article_list = ArticlePost.objects.all()
+        #
+        # if  request.GET.get('order') == 'total_views':
+        #
+        #     article_list = ArticlePost.objects.all().order_by('-total_views')
+        #     order = 'total_views'
+        # else:
+        #     article_list = ArticlePost.objects.all()
+        #     order = 'normal'
+        # # 每页显示的文章数
 
     pagintor = Paginator(article_list,3)
     # 获取页码
