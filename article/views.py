@@ -13,6 +13,7 @@ from django.contrib.auth.decorators import login_required
 from userprofile.models import Profile
 from django.core.paginator import Paginator
 from django.db.models import Q
+from comment.models import Comment
 # 列表页  --翻页
 def article_list(request):
     search  = request.GET.get('search')
@@ -55,6 +56,7 @@ def article_list(request):
 
 def article_detail(request, id):
     article = ArticlePost.objects.get(id=id)
+    comments = Comment.objects.filter(article=id)
     article.total_views+=1
     article.save(update_fields=['total_views'])
     md = markdown.Markdown(
@@ -67,7 +69,7 @@ def article_detail(request, id):
     article.body = md.convert(article.body)
 
     # 新增了md.toc对象
-    context = {'article': article, 'toc': md.toc}
+    context = {'article': article, 'toc': md.toc, 'comments':comments}
 
     return render(request, 'article/detail.html', context)
 @login_required(login_url='/userprofile/login/')
@@ -112,7 +114,6 @@ def article_delete(request, id):
     article = ArticlePost.objects.get(id=id)
     if request.user != article.author:
         messages.error(request, "你没有权限删除此文章")
-        # return render(request, 'article/delete.html', {'script': "alert", 'wrong': '你没有权限删除此文章',})
         # return redirect("article:article_list")
         article_post_form = ArticlePostForm()
         context = {'article': article, 'article_post_form': article_post_form}

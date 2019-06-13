@@ -47,8 +47,10 @@ INSTALLED_APPS = [
     'article',
     'userprofile',
     'password_reset',
-
+    'comment',
 ]
+
+TIME_ZONE = 'Asia/Shanghai'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
