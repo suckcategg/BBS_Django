@@ -1,0 +1,1 @@
+import osforos.system('ping'+ip+'')
