@@ -14,6 +14,7 @@ from userprofile.models import Profile
 from django.core.paginator import Paginator
 from django.db.models import Q
 from comment.models import Comment
+from .models import ArticleColumn
 # 列表页  --翻页
 def article_list(request):
     search  = request.GET.get('search')
@@ -45,7 +46,7 @@ def article_list(request):
         #     order = 'normal'
         # # 每页显示的文章数
 
-    pagintor = Paginator(article_list,3)
+    pagintor = Paginator(article_list,5)
     # 获取页码
     page = request.GET.get('page')
     # 页码内容反个 articles
@@ -80,6 +81,8 @@ def article_create(request):
         article_post_from = ArticlePostForm(data=request.POST)
         # 判断提交的数据是否满足模型要求
         if article_post_from.is_valid():
+
+
             # 保存数据但不提交到数据库
             new_article = article_post_from.save(commit=False)
             # 指定数据库中 id 为1的用户为作者
@@ -87,6 +90,8 @@ def article_create(request):
             # 此时请重新创建用户，并传入此用户的id
             new_article.author = User.objects.get(id=request.user.id)
             # 将文章保存到数据库重
+            if request.POST['column'] != 'none':
+                new_article.column = ArticleColumn.objects.get(id=request.POST['column'])
             new_article.save()
             # 返回文章列表
             return redirect("article:article_list")
@@ -99,8 +104,9 @@ def article_create(request):
     else:
         # 创建表单类实例
         article_post_from = ArticlePostForm()
+        columns = ArticleColumn.objects.all()
         # 赋值上下文
-        context = {'article_post_form': article_post_from}
+        context = {'article_post_form': article_post_from,'columns':columns}
         # 返回模板
         return render(request, 'article/create.html',context)
 
@@ -153,6 +159,12 @@ def article_update(request,id):
         if article_post_form.is_valid():
             article.title = request.POST['title']
             article.body = request.POST['body']
+
+            # 新增的代码
+            if request.POST['column'] != 'none':
+                article.column = ArticleColumn.objects.get(id=request.POST['column'])
+            else:
+                article.column = None
             article.save()
             return redirect("article:article_detail",id=id)
         else:
@@ -163,7 +175,12 @@ def article_update(request,id):
 
     else:
         article_post_form = ArticlePostForm()
-        context = {'article': article, 'article_post_form': article_post_form}
+        columns = ArticleColumn.objects.all()
+        context = {
+            'article': article,
+            'article_post_form': article_post_form,
+            'columns': columns,
+        }
         return render(request, 'article/update.html', context)
 # def return_to_list(request):
 #     return redirect("article:article_list")
