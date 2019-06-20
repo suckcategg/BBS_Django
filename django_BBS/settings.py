@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'userprofile',
     'password_reset',
     'comment',
+    'taggit',
 ]
 
 TIME_ZONE = 'Asia/Shanghai'
