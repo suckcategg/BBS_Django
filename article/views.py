@@ -17,43 +17,50 @@ from comment.models import Comment
 from .models import ArticleColumn
 # 列表页  --翻页
 def article_list(request):
-    search  = request.GET.get('search')
+    # 从 url 中提取查询参数
+    search = request.GET.get('search')
     order = request.GET.get('order')
+    column = request.GET.get('column')
+    tag = request.GET.get('tag')
+
+    # 初始化查询集
+    article_list = ArticlePost.objects.all()
+
+    # 搜索查询集
     if search:
-        if order == 'total_views':
-            article_list = ArticlePost.objects.filter(
-                Q(title__icontains=search)|
-                Q(body__icontains=search)
-            ).order_by('-total_views')
-        else:
-            article_list = ArticlePost.objects.filter(
-                Q(title__icontains=search)|
-                Q(body__icontains=search)
-            )
+        article_list = article_list.filter(
+            Q(title__icontains=search) |
+            Q(body__icontains=search)
+        )
     else:
-        search = ""
-        if order == 'total_views':
-            article_list = ArticlePost.objects.all().order_by('-total_views')
-        else:
-            article_list = ArticlePost.objects.all()
-        #
-        # if  request.GET.get('order') == 'total_views':
-        #
-        #     article_list = ArticlePost.objects.all().order_by('-total_views')
-        #     order = 'total_views'
-        # else:
-        #     article_list = ArticlePost.objects.all()
-        #     order = 'normal'
-        # # 每页显示的文章数
+        search = ''
 
-    pagintor = Paginator(article_list,5)
-    # 获取页码
+    # 栏目查询集
+    if column is not None and column.isdigit():
+        article_list = article_list.filter(column=column)
+
+    # 标签查询集
+    if tag and tag != 'None':
+        article_list = article_list.filter(tags__name__in=[tag])
+
+    # 查询集排序
+    if order == 'total_views':
+        article_list = article_list.order_by('-total_views')
+
+    paginator = Paginator(article_list, 3)
     page = request.GET.get('page')
-    # 页码内容反个 articles
-    articles = pagintor.get_page(page)
+    articles = paginator.get_page(page)
 
-    context = {'articles':articles,'order':order}
-    return render(request,'article/list.html',context)
+    # 需要传递给模板（templates）的对象
+    context = {
+        'articles': articles,
+        'order': order,
+        'search': search,
+        'column': column,
+        'tag': tag,
+    }
+
+    return render(request, 'article/list.html', context)
 
 def article_detail(request, id):
     article = ArticlePost.objects.get(id=id)
@@ -93,6 +100,8 @@ def article_create(request):
             if request.POST['column'] != 'none':
                 new_article.column = ArticleColumn.objects.get(id=request.POST['column'])
             new_article.save()
+            # 保存 tags的多读多关系
+            article_post_from._save_m2m()
             # 返回文章列表
             return redirect("article:article_list")
         else:

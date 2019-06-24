@@ -4,7 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
-
+from taggit.managers import TaggableManager
 
 
 class ArticleColumn(models.Model):
@@ -21,7 +21,7 @@ class ArticlePost(models.Model):
     created = models.DateTimeField(default=timezone.now)
     update = models.DateTimeField(auto_now=True)
     total_views = models.PositiveIntegerField(default=0)
-
+    tags = TaggableManager(blank=True)
     column = models.ForeignKey(
         ArticleColumn,
         null=True,
