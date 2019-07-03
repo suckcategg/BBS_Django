@@ -22,7 +22,7 @@ from django.contrib import admin
 from article import views
 from article.views import  article_list
 urlpatterns = [
-    url(r'^$',views.article_list),
+    url(r'^$',views.article_list),# 直接访问域名+端口号自动访问首页
     path('admin/', admin.site.urls),
     path('article/', include('article.urls', namespace='article')),
     path('userprofile/', include('userprofile.urls', namespace='userprofile')),
