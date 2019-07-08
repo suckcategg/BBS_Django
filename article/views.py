@@ -16,6 +16,7 @@ from django.db.models import Q
 from comment.models import Comment
 from .models import ArticleColumn
 # 列表页  --翻页
+
 def article_list(request):
     # 从 url 中提取查询参数
     search = request.GET.get('search')
@@ -84,8 +85,9 @@ def article_detail(request, id):
 def article_create(request):
     # 判断用户是否提交空数据
     if request.method == "POST":
+        article_post_form = ArticlePostForm(request.POST, request.FILES)
         # 将提交的数据复制到表单
-        article_post_from = ArticlePostForm(data=request.POST)
+        # article_post_from = ArticlePostForm(data=request.POST)
         # 判断提交的数据是否满足模型要求
         if article_post_from.is_valid():
 
