@@ -83,29 +83,26 @@ def article_detail(request, id):
     return render(request, 'article/detail.html', context)
 @login_required(login_url='/userprofile/login/')
 def article_create(request):
-    # 判断用户是否提交空数据
+    # 判断用户是否提交数据
     if request.method == "POST":
+        # 将提交的数据赋值到表单实例中
         article_post_form = ArticlePostForm(request.POST, request.FILES)
-        # 将提交的数据复制到表单
-        # article_post_from = ArticlePostForm(data=request.POST)
-        # 判断提交的数据是否满足模型要求
-        if article_post_from.is_valid():
-
-
-            # 保存数据但不提交到数据库
-            new_article = article_post_from.save(commit=False)
-            # 指定数据库中 id 为1的用户为作者
-            # 如果你进行过删除数据表的操作，可能会找不到id=1的用户
-            # 此时请重新创建用户，并传入此用户的id
+        # 判断提交的数据是否满足模型的要求
+        if article_post_form.is_valid():
+            # 保存数据，但暂时不提交到数据库中
+            new_article = article_post_form.save(commit=False)
+            # 指定登录的用户为作者
             new_article.author = User.objects.get(id=request.user.id)
-            # 将文章保存到数据库重
             if request.POST['column'] != 'none':
+                # 保存文章栏目
                 new_article.column = ArticleColumn.objects.get(id=request.POST['column'])
+            # 将新文章保存到数据库中
             new_article.save()
-            # 保存 tags的多读多关系
-            article_post_from._save_m2m()
-            # 返回文章列表
+            # 保存 tags 的多对多关系
+            article_post_form.save_m2m()
+            # 完成后返回到文章列表
             return redirect("article:article_list")
+        # 如果数据不合法，返回错误信息
         else:
             messages.error(request, "表单内容有误，请重新填写！")
             return render(request, 'article/create.html')

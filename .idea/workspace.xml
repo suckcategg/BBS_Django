@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26de2a4a-724d-4e79-95ae-ae0063f97290" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/article/migrations/0002_articlepost_avatar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/article/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/article/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,13 +34,32 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$USER_HOME$/Desktop/1.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="19">
+                    <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/article/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="119" column="32" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+            <state relative-caret-position="475">
+              <caret line="105" column="13" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
               <folding>
                 <element signature="e#18#63#0" expanded="true" />
               </folding>
@@ -67,20 +82,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+            <state relative-caret-position="361">
+              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/article/update.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -94,20 +100,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/article/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="115" column="16" lean-forward="true" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#p#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="2318">
+              <caret line="122" selection-start-line="122" selection-end-line="122" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/media/article/20190708/NWK2KS9H9LPEQ7COU9.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -117,18 +121,6 @@
               <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-              <folding>
-                <element signature="e#84#93#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+            <state relative-caret-position="285">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -225,15 +217,15 @@
         <option value="$PROJECT_DIR$/django_BBS/settings.py" />
         <option value="$PROJECT_DIR$/article/forms.py" />
         <option value="$PROJECT_DIR$/templates/article/create.html" />
-        <option value="$PROJECT_DIR$/article/models.py" />
-        <option value="$PROJECT_DIR$/article/views.py" />
         <option value="$PROJECT_DIR$/templates/article/list.html" />
+        <option value="$PROJECT_DIR$/article/models.py" />
+        <option value="$USER_HOME$/Desktop/1.py" />
+        <option value="$PROJECT_DIR$/article/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="103" />
-    <option name="y" value="16" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="166" />
     <option name="width" value="1567" />
     <option name="height" value="999" />
   </component>
@@ -251,38 +243,6 @@
             <path>
               <item name="BBS_Django" type="b2602c69:ProjectViewProjectNode" />
               <item name="BBS_Django" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBS_Django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBS_Django" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBS_Django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBS_Django" type="462c0819:PsiDirectoryNode" />
-              <item name="django_BBS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBS_Django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBS_Django" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBS_Django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBS_Django" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBS_Django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBS_Django" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBS_Django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBS_Django" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="userprofile" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -394,6 +354,7 @@
       <workItem from="1561346339218" duration="6695000" />
       <workItem from="1561519684829" duration="845000" />
       <workItem from="1561709198757" duration="284000" />
+      <workItem from="1562821144662" duration="4473000" />
     </task>
     <task id="LOCAL-00001" summary="完成登录/退出">
       <created>1559226565159</created>
@@ -577,22 +538,36 @@
       <option name="project" value="LOCAL" />
       <updated>1561020732125</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="勉强实现文章标题图&#10;1只有创建时可上传">
+      <created>1562579625324</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1562579625325</updated>
+    </task>
+    <task id="LOCAL-00028" summary="勉强实现文章标题图&#10;1只有创建时可上传">
+      <created>1562579652779</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1562579652779</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160840000" />
+    <option name="totallyTimeSpent" value="166429000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="166" y="0" width="1567" height="999" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.119936034" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15063038" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3429844" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.34244946" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3997773" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -601,7 +576,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.2505568" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32962137" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50099534" side_tool="true" weight="0.2532699" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.20095125" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.21403092" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936978" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32962137" />
       <window_info anchor="bottom" id="manage.py@django_BBS" order="14" weight="0.2572383" />
@@ -674,7 +649,8 @@
     <MESSAGE value="修改readme&#10;增加 依赖库文本" />
     <MESSAGE value="修改评论空格问题" />
     <MESSAGE value="列表竖排显示 增加分类" />
-    <option name="LAST_COMMIT_MESSAGE" value="列表竖排显示 增加分类" />
+    <MESSAGE value="勉强实现文章标题图&#10;1只有创建时可上传" />
+    <option name="LAST_COMMIT_MESSAGE" value="勉强实现文章标题图&#10;1只有创建时可上传" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -688,108 +664,18 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/sqlite_sequence">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/auth_permission">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/auth_group_permissions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/django_session">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/auth_group">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/article_articlepost">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/django_migrations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/sqlite_master">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/django_content_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/auth_group_permissions" />
+    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/django_session" />
+    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/auth_group" />
+    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/article_articlepost" />
+    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/django_migrations" />
+    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/sqlite_master" />
+    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/django_content_type" />
+    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/auth_user" />
     <entry file="file://$PROJECT_DIR$/userprofile/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/userprofile_profile">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://d6fa6297-7a5e-49bc-a7b4-9861c86fc7cd/schema/main/table/userprofile_profile" />
     <entry file="file://$PROJECT_DIR$/templates/userprofile/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1019,34 +905,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/article/update.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
+        <state relative-caret-position="627">
           <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/article/create.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/article/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2318">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/article/20190708/NWK2KS9H9LPEQ7COU9.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1070,33 +956,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/article/create.html">
+    <entry file="file://$PROJECT_DIR$/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        <state relative-caret-position="285">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="119" column="32" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+        <state relative-caret-position="475">
+          <caret line="105" column="13" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
           <folding>
             <element signature="e#18#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/article/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="115" column="16" lean-forward="true" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#p#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
