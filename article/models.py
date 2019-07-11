@@ -46,7 +46,7 @@ class ArticlePost(models.Model):
                 new_y = int(new_x * (y / x))
             else:
                 new_y = 250
-                new_x = int(new_y * (x/y))
+                new_x = 400
             resized_image = image.resize((new_x, new_y), Image.ANTIALIAS)
             resized_image.save(self.avatar.path)
 
