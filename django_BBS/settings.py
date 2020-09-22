@@ -99,10 +99,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'BBS',
-        'HOST': '47.102.131.85',
+        'HOST': '49.232.66.162',
         'PORT':  3306,
-        'USER': 'root',
-        'PASSWORD': 'toor',
+        'USER': 'BBS',
+        'PASSWORD': 'BBS',
     }
 }
 
