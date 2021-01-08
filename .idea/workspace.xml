@@ -33,10 +33,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26de2a4a-724d-4e79-95ae-ae0063f97290" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/django_BBS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django_BBS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/migrations/0002_articlepost_avatar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/migrations/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,10 +99,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/django_BBS/urls.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/userprofile/urls.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/userprofile/views.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/article/views.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/django_BBS/urls.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/userprofile/views.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1ZKskxUaYy8K5TZHWRQafr90d03" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -211,6 +211,7 @@
       <workItem from="1593911296697" duration="87000" />
       <workItem from="1593925924166" duration="164000" />
       <workItem from="1600752642142" duration="747000" />
+      <workItem from="1610091805960" duration="1735000" />
     </task>
     <task id="LOCAL-00001" summary="完成登录/退出">
       <created>1559226565159</created>
