@@ -31,6 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['2459zf9467.wicp.vip',
                  '127.0.0.1',
                  'localhost',
+                 '0.0.0.0',
                  '49.232.66.162',
                  ]
 
