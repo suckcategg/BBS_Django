@@ -102,8 +102,8 @@ DATABASES = {
         'NAME': 'BBS',
         'HOST': '49.232.66.162',
         'PORT':  3306,
-        'USER': 'BBS',
-        'PASSWORD': 'BBS',
+        'USER': 'root',
+        'PASSWORD': 'i6s9g2m4',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
