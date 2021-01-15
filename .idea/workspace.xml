@@ -34,6 +34,7 @@
   <component name="ChangeListManager">
     <list default="true" id="26de2a4a-724d-4e79-95ae-ae0063f97290" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_BBS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_BBS/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +209,9 @@
       <workItem from="1593911296697" duration="87000" />
       <workItem from="1593925924166" duration="164000" />
       <workItem from="1600752642142" duration="747000" />
-      <workItem from="1610091805960" duration="3552000" />
+      <workItem from="1610091805960" duration="5457000" />
+      <workItem from="1610279240620" duration="44000" />
+      <workItem from="1610412857057" duration="2637000" />
     </task>
     <task id="LOCAL-00001" summary="完成登录/退出">
       <created>1559226565159</created>
@@ -427,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610093683287</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="all ip">
+      <created>1610096272893</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1610096272893</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +466,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成&quot;用户注册&quot;" />
     <MESSAGE value="完成&quot;用户删除&quot;" />
     <MESSAGE value="完成&quot;重置密码&quot;   邮箱配置已注释" />
     <MESSAGE value="增加扩展用户信 models.py &#10;header“我的博客”跳转首页" />
@@ -481,17 +490,38 @@
     <MESSAGE value="修改标题图bug   form&#10;form&#10;form&#10;form&#10;form!!!" />
     <MESSAGE value="修改标题图bug   form&#10;form&#10;n&#10;form&#10;form&#10;form!!!" />
     <MESSAGE value="sql ip" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql ip" />
+    <MESSAGE value="all ip" />
+    <option name="LAST_COMMIT_MESSAGE" value="all ip" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="516" y="17" key="CommitChangelistDialog2" timestamp="1610093682124">
+    <state x="516" y="17" key="CommitChangelistDialog2" timestamp="1610096271891">
       <screen x="0" y="0" width="1824" height="1176" />
     </state>
-    <state x="516" y="17" key="CommitChangelistDialog2/0.0.1824.1176@0.0.1824.1176" timestamp="1610093682124" />
-    <state x="505" y="317" key="Vcs.Push.Dialog.v2" timestamp="1610093685935">
+    <state x="516" y="17" key="CommitChangelistDialog2/0.0.1824.1176@0.0.1824.1176" timestamp="1610096271891" />
+    <state width="1781" height="239" key="GridCell.Tab.0.bottom" timestamp="1610444673864">
       <screen x="0" y="0" width="1824" height="1176" />
     </state>
-    <state x="505" y="317" key="Vcs.Push.Dialog.v2/0.0.1824.1176@0.0.1824.1176" timestamp="1610093685935" />
+    <state width="1781" height="239" key="GridCell.Tab.0.bottom/0.0.1824.1176@0.0.1824.1176" timestamp="1610444673864" />
+    <state width="1781" height="239" key="GridCell.Tab.0.center" timestamp="1610444673864">
+      <screen x="0" y="0" width="1824" height="1176" />
+    </state>
+    <state width="1781" height="239" key="GridCell.Tab.0.center/0.0.1824.1176@0.0.1824.1176" timestamp="1610444673864" />
+    <state width="1781" height="239" key="GridCell.Tab.0.left" timestamp="1610444673864">
+      <screen x="0" y="0" width="1824" height="1176" />
+    </state>
+    <state width="1781" height="239" key="GridCell.Tab.0.left/0.0.1824.1176@0.0.1824.1176" timestamp="1610444673864" />
+    <state width="1781" height="239" key="GridCell.Tab.0.right" timestamp="1610444673864">
+      <screen x="0" y="0" width="1824" height="1176" />
+    </state>
+    <state width="1781" height="239" key="GridCell.Tab.0.right/0.0.1824.1176@0.0.1824.1176" timestamp="1610444673864" />
+    <state x="505" y="317" key="Vcs.Push.Dialog.v2" timestamp="1610096280118">
+      <screen x="0" y="0" width="1824" height="1176" />
+    </state>
+    <state x="505" y="317" key="Vcs.Push.Dialog.v2/0.0.1824.1176@0.0.1824.1176" timestamp="1610096280118" />
+    <state x="575" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1610096238862">
+      <screen x="0" y="0" width="1824" height="1176" />
+    </state>
+    <state x="575" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1824.1176@0.0.1824.1176" timestamp="1610096238862" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
